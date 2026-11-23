@@ -36,3 +36,20 @@ The Rem sprite will be an original, small pixel-art rendition with transparent b
 - [Technical plan](docs/technical-plan.md)
 
 No APK has been built or device-tested yet.
+
+## Android app foundation
+
+The first native Android implementation is now in the repository:
+
+- Kotlin + Jetpack Compose app module (app/)
+- Four swipe pages: main clock/calendar/music layout, full clock, Rem placeholder scene, and widget dashboard
+- Immersive dark StandBy presentation and screen-on behavior while the app is open
+- GitHub Actions workflow to build a debug APK on pushes and pull requests
+
+### Build locally
+
+Open this repository in Android Studio, allow Gradle sync, then run the app configuration on an Android device or emulator. The project uses JDK 17 and Android SDK 36.
+
+### Current limitations
+
+This is an early UI foundation, not a finished StandBy app. Music controls are visual placeholders and do not control a media session yet. Battery/weather data, charging-aware activation, thermal throttling, settings, home-screen widgets, and the final animated Rem sprite sheet are not implemented. The GitHub Actions workflow is configured, but a successful build has not yet been verified.
